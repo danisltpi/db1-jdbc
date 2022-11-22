@@ -5,6 +5,7 @@ import java.util.Properties;
 
 public class DatabaseConnection {
   public static void main(String args[]) throws ClassNotFoundException {
+    // aufgabe 1
     Connection conn = establishConnection();
     getInfo(conn);
     disconnectDatabase(conn);
