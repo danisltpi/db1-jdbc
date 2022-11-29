@@ -9,8 +9,11 @@ public class PrintTableData {
       Statement st = conn.createStatement();
       ResultSet rs = st.executeQuery("SELECT persnr, name, ort, aufgabe FROM personal");
       printResults(rs);
+      rs = st.executeQuery("SELECT * FROM kunde");
+      printResults(rs);
       rs.close();
       st.close();
+      DatabaseConnection.disconnectDatabase(conn);
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -19,17 +22,43 @@ public class PrintTableData {
   public static void printResults(ResultSet rs) {
     try {
       ResultSetMetaData rsmd = rs.getMetaData();
-      int columnsNumber = rsmd.getColumnCount();
-      while (rs.next()) {
-        for (int i = 1; i <= columnsNumber; i++) {
-          if (i > 1)
-            System.out.print(",  ");
-          String columnValue = rs.getString(i);
-          System.out.print(columnValue + " " + rsmd.getColumnName(i));
-        }
-        System.out.println("");
+      int cols = rsmd.getColumnCount();
+      // header col names
+      String header = "";
+      for (int col = 1; col <= cols; col++) {
+        int colWidth = rsmd.getColumnDisplaySize(col);
+        String colName = rsmd.getColumnLabel(col);
+        header += String.format("%-" + colWidth + "s", colName);
+        header += " | ";
       }
-    } catch (Exception e) {
+      header += "\n";
+      // header col types
+      for (int col = 1; col <= cols; col++) {
+        int colWidth = rsmd.getColumnDisplaySize(col);
+        String colType = rsmd.getColumnTypeName(col);
+        header += String.format("%-" + colWidth + "s", colType);
+        header += " | ";
+      }
+      header += "\n";
+      // separator
+      for (int col = 1; col <= cols; col++) {
+        int colWidth = rsmd.getColumnDisplaySize(col);
+        header += String.format("%-" + colWidth + "s", "-").replace(" ", "-");
+        header += "-+-";
+      }
+      System.out.println(header);
+      while (rs.next()) {
+        String row = "";
+        for (int col = 1; col <= cols; col++) {
+          int colWidth = rsmd.getColumnDisplaySize(col);
+          String value = rs.getString(col);
+          row += String.format("%" + colWidth + "s", value);
+          row += " | ";
+        }
+        System.out.println(row);
+      }
+      System.out.println();
+    } catch (SQLException e) {
       e.printStackTrace();
     }
   }
