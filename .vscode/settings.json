@@ -2,5 +2,17 @@
   "java.project.outputPath": "bin",
   "java.project.sourcePaths": [
     "src"
+  ],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3690,
+      "driver": "PostgreSQL",
+      "name": "db1 g22",
+      "database": "datenbanken1.ddns.net",
+      "username": "g22",
+      "password": "agmbQckaKC"
+    }
   ]
 }
