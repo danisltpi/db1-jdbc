@@ -42,15 +42,30 @@ public class PrintTableData {
       header += "\n";
       // separator
       for (int col = 1; col <= cols; col++) {
+
+        // use the column size of the header if the column size of the data is too short
         int colWidth = rsmd.getColumnDisplaySize(col);
+        String colName = rsmd.getColumnName(col);
+        String colType = rsmd.getColumnTypeName(col);
+        int colNameWidth = colName.length() >= colType.length() ? colName.length() : colType.length();
+        colWidth = colWidth >= colNameWidth ? colWidth : colNameWidth;
         header += String.format("%-" + colWidth + "s", "-").replace(" ", "-");
         header += "-+-";
       }
       System.out.println(header);
+
+      // print actual table data
       while (rs.next()) {
         String row = "";
         for (int col = 1; col <= cols; col++) {
+
+          // use the column size of the header if the column size of the data is too short
           int colWidth = rsmd.getColumnDisplaySize(col);
+          String colName = rsmd.getColumnName(col);
+          String colType = rsmd.getColumnTypeName(col);
+          int colNameWidth = colName.length() >= colType.length() ? colName.length() : colType.length();
+          colWidth = colWidth >= colNameWidth ? colWidth : colNameWidth;
+
           String value = rs.getString(col);
           row += String.format("%" + colWidth + "s", value);
           row += " | ";
