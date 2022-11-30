@@ -49,6 +49,7 @@ public class PrintTableData {
         String colType = rsmd.getColumnTypeName(col);
         int colNameWidth = colName.length() >= colType.length() ? colName.length() : colType.length();
         colWidth = colWidth >= colNameWidth ? colWidth : colNameWidth;
+
         header += String.format("%-" + colWidth + "s", "-").replace(" ", "-");
         header += "-+-";
       }
