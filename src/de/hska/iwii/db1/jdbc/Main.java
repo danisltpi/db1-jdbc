@@ -9,14 +9,27 @@ public class Main {
   public static void main(String[] args) throws IOException, SQLException {
     // aufgabe 4.3
     Connection conn = DatabaseConnection.establishConnection();
-    Statement st = conn.createStatement();
-    String query = getQuery();
-    ResultSet rs = st.executeQuery(query);
-    PrintTableData.printResults(rs);
+    printQueryTable(conn);
+    printQueryTable(conn, "Rafa%");
     DatabaseConnection.disconnectDatabase(conn);
   }
 
-  public static String getQuery() throws IOException {
-    return new String(Files.readAllBytes(Paths.get("sql/4_3.sql")));
+  public static String readFile(String path) throws IOException {
+    return new String(Files.readAllBytes(Paths.get(path)));
+  }
+
+  public static void printQueryTable(Connection conn) throws SQLException, IOException {
+    String query = readFile("sql/4_3.sql");
+    Statement st = conn.createStatement();
+    ResultSet rs = st.executeQuery(query);
+    PrintTableData.printResults(rs);
+  }
+
+  public static void printQueryTable(Connection conn, String search) throws SQLException, IOException {
+    String query = readFile("sql/4_3parameterized.sql");
+    PreparedStatement st = conn.prepareStatement(query);
+    st.setString(1, search);
+    ResultSet rs = st.executeQuery();
+    PrintTableData.printResults(rs);
   }
 }
