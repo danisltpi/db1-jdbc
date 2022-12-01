@@ -6,11 +6,11 @@
   "sqltools.connections": [
     {
       "previewLimit": 50,
-      "server": "localhost",
+      "server": "datenbanken1.ddns.net",
       "port": 3690,
       "driver": "PostgreSQL",
       "name": "db1 g22",
-      "database": "datenbanken1.ddns.net",
+      "database": "g22",
       "username": "g22",
       "password": "agmbQckaKC"
     }
