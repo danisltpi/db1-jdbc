@@ -7,4 +7,5 @@ FROM auftragsposten
   JOIN kunde ON auftrag.kundnr = kunde.nr
   JOIN teilestamm ON auftragsposten.teilnr = teilestamm.teilnr
   JOIN lieferung ON teilestamm.teilnr = lieferung.teilnr
-  JOIN lieferant ON lieferung.liefnr = lieferant.nr;
+  JOIN lieferant ON lieferung.liefnr = lieferant.nr
+WHERE kunde.name LIKE ?;
