@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/antlr4-runtime-4.10.jar"/>
+	<classpathentry kind="lib" path="lib/byte-buddy-1.12.9.jar"/>
+	<classpathentry kind="lib" path="lib/c3p0-0.9.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/checker-qual-3.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/classmate-1.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/h2-2.1.214.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-c3p0-6.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-commons-annotations-6.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-core-6.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-validator-7.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="lib/istack-commons-runtime-4.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.activation-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.el-4.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.el-api-4.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.inject-api-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.persistence-api-3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.transaction-api-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.validation-api-3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta.xml.bind-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jandex-2.4.2.Final.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-core-3.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-runtime-3.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/jboss-logging-3.4.3.Final.jar"/>
+	<classpathentry kind="lib" path="lib/mchange-commons-java-0.2.19.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc11-21.7.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-42.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/txw2-3.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/validation-api-2.0.1.Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

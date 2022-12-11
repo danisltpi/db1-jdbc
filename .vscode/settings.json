@@ -1,0 +1,22 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "193.196.36.21",
+      "port": 3690,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "Bikeshop hka",
+      "database": "g22",
+      "username": "g22"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "localhost db1",
+      "database": "db1",
+    }
+  ]
+}
