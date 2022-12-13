@@ -30,7 +30,7 @@ public class Buchung {
   }
 
   @ManyToOne
-  @JoinColumn(name = "flug.id")
+  @JoinColumn(name = "flugid")
   private Flug flug;
 
   public Flug getFlug() {
@@ -42,7 +42,7 @@ public class Buchung {
   }
 
   @ManyToOne
-  @JoinColumn(name = "kunde.id")
+  @JoinColumn(name = "kundeid")
   private Kunde kunde;
 
   public Kunde getKunde() {
@@ -61,7 +61,8 @@ public class Buchung {
   }
 
   public void setSeats(int seats) {
-    this.seats = seats;
+    if (seats >= 1)
+      this.seats = seats;
   }
 
   @Column(name = "datum")
