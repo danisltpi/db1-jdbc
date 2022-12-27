@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/accessors-smart-2.4.8.jar"/>
+	<classpathentry kind="lib" path="lib/asm-9.1.jar"/>
+	<classpathentry kind="lib" path="lib/checker-qual-3.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/content-type-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/h2-2.1.214.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.13.3.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.13.3.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.13.3.jar"/>
+	<classpathentry kind="lib" path="lib/jcip-annotations-1.0-1.jar"/>
+	<classpathentry kind="lib" path="lib/json-smart-2.4.8.jar"/>
+	<classpathentry kind="lib" path="lib/lang-tag-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/msal4j-1.13.0.jar"/>
+	<classpathentry kind="lib" path="lib/mssql-jdbc-11.2.0.jre18.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.30.jar"/>
+	<classpathentry kind="lib" path="lib/nimbus-jose-jwt-9.22.jar"/>
+	<classpathentry kind="lib" path="lib/oauth2-oidc-sdk-9.35.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc11-21.7.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-42.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/protobuf-java-3.19.4.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.36.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
