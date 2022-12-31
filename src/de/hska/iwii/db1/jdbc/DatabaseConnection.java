@@ -12,7 +12,7 @@ public class DatabaseConnection {
   }
 
   public static Connection establishConnection() {
-    String url = "jdbc:postgresql://localhost:5432/";
+    String url = "jdbc:postgresql://localhost:5432/bonus";
     Properties props = new Properties();
 
     try {
